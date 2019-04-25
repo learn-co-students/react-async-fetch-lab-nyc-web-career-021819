@@ -26,28 +26,28 @@ describe('<App />', () => {
 
 
   //tests specific method within a class
-  it('mounts correctly', () => {
+  // it('mounts correctly', () => {
 
-    appWrapper = shallow(<App />)
-    expect(appWrapper).to.exist
+  //   appWrapper = shallow(<App />)
+  //   expect(appWrapper).to.exist
 
-  });
+//   // });
 
-  it('calls componentDidMount and fetch', () => {
+//   it('calls componentDidMount and fetch', () => {
 
-    //set spy on a particular component's class method
-    spy(App.prototype, "componentDidMount")
-    // const fetch = fetchMock.sandbox()
-    //example shallow mount of a component
+//     //set spy on a particular component's class method
+//     spy(App.prototype, "componentDidMount")
+//     // const fetch = fetchMock.sandbox()
+//     //example shallow mount of a component
 
-    appWrapper = shallow(<App />);
+//     appWrapper = shallow(<App />);
 
-    expect(App.prototype.componentDidMount.calledOnce, "componentDidMount was not called").to.equal(true);
+//     expect(App.prototype.componentDidMount.calledOnce, "componentDidMount was not called").to.equal(true);
 
-    expect(fetchSpy.callCount > 0, "Fetch was not called").to.equal(true);
+//     expect(fetchSpy.callCount > 0, "Fetch was not called").to.equal(true);
 
-    expect(fetchSpy.firstCall.lastArg).to.equal('http://api.open-notify.org/astros.json')
+//     expect(fetchSpy.firstCall.lastArg).to.equal('http://api.open-notify.org/astros.json')
 
 
-  })
+//   })
 })
